@@ -8,6 +8,12 @@ Si cumple con ambas, retornar "Contraseña válida", de lo contrario "Contraseñ
 */
 function validarContrasena(contrasena) {
     // TODO: Resolver
+    const tieneNumero = /\d/; // Expresión regular para verificar si contiene al menos un número
+    if (contrasena.length >= 8 && tieneNumero.test(contrasena)) {
+        return "Contraseña válida";
+    } else {
+        return "Contraseña no válida";
+    }
 }
 
 console.log("-----------------------------------")

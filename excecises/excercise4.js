@@ -7,11 +7,26 @@ Recuerde que "No se puede dividir entre 0".
 */
 function calculadora(operacion, num1, num2) {
     // TODO: Resolver
+    switch (operacion) {
+        case "suma":
+            return num1 + num2;
+        case "resta":
+            return num1 - num2;
+        case "multiplicacion":
+            return num1 * num2;
+        case "division":
+            if (num2 === 0) {
+                return "No se puede dividir entre 0";
+            }
+            return num1 / num2;
+        default:
+            return "Operación no reconocida";
+    }
 }
-
+//Esta función utiliza una estructura switch para manejar las diferentes operaciones. Si la operación no es válida, retorna “Operación no reconocida”. Además, verifica si el divisor es 0 para evitar la división por cero.
 console.log("-----------------------------------")
 console.log("EJERCICIO 4")
 console.log("-----------------------------------")
-console.log(calculadora("suma", 5, 3));         // 8
-console.log(calculadora("division", 10, 0));    // "No se puede dividir entre 0"
+console.log(calculadora("suma", 5, 3)); // 8
+console.log(calculadora("division", 10, 0)); // "No se puede dividir entre 0"
 console.log(calculadora("multiplicacion", 2, 4)); // 8

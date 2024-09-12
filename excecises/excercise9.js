@@ -7,6 +7,13 @@ Si la escala es "C", convierte de Celsius a Fahrenheit. Si la escala es "F", con
 */
 function convertirTemperatura(temperatura, escala) {
     // TODO: Resolver
+    if (escala === "C") {
+        return (temperatura * 9/5) + 32; // Convertir de Celsius a Fahrenheit
+    } else if (escala === "F") {
+        return (temperatura - 32) * 5/9; // Convertir de Fahrenheit a Celsius
+    } else {
+        return "Escala no reconocida";
+    }
 }
 
 console.log("-----------------------------------")
